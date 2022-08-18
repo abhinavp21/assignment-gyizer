@@ -1,0 +1,41 @@
+								Sorting algorithms
+
+O(n^2) time complexity, O(1) space complexity
+	A) bubble sort - elements are sorted by repeated swapping adjacent ones if they are not in increasing/decreasing order. After each iteration we get max/min at the end of array.
+
+	B) selection sort - min element is selected in each iteration and placed at the i-th position of the array by swapping it with i-th element. 
+
+	C) insertion sort - in this sorting technique, the i-th element is picked and inserted into the array of i previously sorted elements, by repeatedly swapping elements.
+
+
+O(nlogn) time complexity
+	A) merge sort - this is a recursive algorithm and falls under divide and conquer strategy. It involves three steps  -
+	1) divide the array recusively into two parts.
+	2) sort the two arrays recursively by following pt.1 and pt.3.
+	3) combine the two sorted arrays to get a complete sorted array. 
+	Space Complexity - O(n) for merging two arrays.
+	
+	B) quick sort - it is also a recursive algorithm. We chose a pivot(e.g. the first element of array) and put it in its correct position if the array was sorted. We then recursively repeat this step on the left part and right part of pivot. 
+	Worst case time complexitty - O(n^2), space complexity O(1)
+
+	C) heap sort - It uses the concept of heap, which is a complete binary tree where every parent node is smaller/greater than its children.Firstly, we create a heap from the given array(heapify). Then we swap the top element of heap(first element of array)  with last element and decrease its size by one.After that we heapify the array. We repeat this step till only 1 element is left.
+	Space complexity - O(1)
+
+O(n) time complexity
+	A) counting sort - It is used when the range of values in array is small. The frequency of elements are stored in a freq array in ascending order of element's values. After that the cumulative freq of elements is calculated. Lastly the elements are stored at freq[element] position and freq is reduced by 1 for that element. 
+	Space Complexity - O(n)
+
+	B) radix sort - It is used to sort array where range of values is large. Elements are sorted according to their digits from least significant to most significant digit. In this algo, count sort is used to order by digit.
+	Space Complexity - O(nd)
+
+	C) bucket sort - Is is used to sort elements having fractional values or are fairly distributed in a range. n buckets are created which cover the lower and upper bound of values. elements are inserted into this bucket according to their most significant digit' value by using insertion sort.
+	Space complexity - O(range)
+
+	Sorting Algorithms which dont use extra space are called in-place and vice-versa.Eg- O(n^2) sorting
+
+	Stable sort - Sorting in the relative order of same elements is maintained. Eg- merge sort 
+
+	Applications-
+	1) Insertion sort is used to order cards.
+	2) merge sort is used in databases.
+	3) selection sort in arranging students according to height.
